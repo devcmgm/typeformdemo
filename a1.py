@@ -7,8 +7,10 @@ data = res.json()
 #with open('typeform.demo') as json_file:
 #data = json.load(json_file)
 
-for a1 in data["items"][0]["answers"]:
-    print("label")
+for a1 in data["items"]:
+    if (a1["answers"] == "phone_number"):
+       print("phone:" + a1["phone_number"])
+    print(a1)
 
 
 if not isinstance(data, dict):
